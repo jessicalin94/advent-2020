@@ -109,7 +109,7 @@ func findTarget3n(input []int, target int) (int, error) {
 			return k * x * y, nil
 		}
 	}
-	return 0, nil
+	return 0, errors.New("unable to find complements")
 }
 
 // 2000 target
