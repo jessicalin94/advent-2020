@@ -16,3 +16,16 @@ cid:83 pid:524032739 iyr:2013 ecl:amb byr:1974
 hgt:191cm hcl:#ceb3a1 eyr:2028
 
 ecl:gry hcl:eefed5 pid:88405792 hgt:183cm cid:221 byr:1963 eyr:2029
+
+pid:777881168 ecl:grn
+hgt:181cm byr:1923 eyr:2021 iyr:2018 hcl:#18171d
+
+byr:1941 eyr:2027 ecl:gry iyr:2016 pid:062495008 hcl:#a5e1b5 hgt:178cm
+
+cid:56
+byr:1971
+hcl:#efcc98 pid:649868696 iyr:2011 eyr:2025 hgt:164cm
+
+ecl:blu
+pid:117915262 eyr:2023 byr:1925 iyr:2020 hcl:#888785
+hgt:188cm
