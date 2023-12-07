@@ -8,6 +8,8 @@ import (
 	"strings"
 )
 
+// https://adventofcode.com/2020/day/5
+
 func main() {
 	part1 := highestID("05/input.txt")
 	fmt.Printf("part1: %v\n", part1)
