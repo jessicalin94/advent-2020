@@ -10,11 +10,40 @@ import (
 
 // https://adventofcode.com/2020/day/5
 
+var lowestRow, highestRow int
+
 func main() {
 	part1 := highestID("05/input.txt")
 	fmt.Printf("part1: %v\n", part1)
+
+	part2 := myID("05/input.txt")
+	fmt.Printf("part2: %v\n", part2)
+
+	fmt.Println(lowestRow, highestRow)
 }
 
+// part 2
+func myID(path string) int {
+	records := readInput(path)
+	otherIDs := make(map[int]struct{})
+	myID := 0
+	for _, record := range records {
+		otherIDs[seatID(record)] = struct{}{}
+	}
+
+	for i := 1; i <= highestRow; i++ {
+		for j := 0; j <= 7; j++ {
+			id := i*8 + j
+			_, ok := otherIDs[id]
+			if !ok {
+				myID = id
+			}
+		}
+	}
+	return myID
+}
+
+// part 1
 func highestID(path string) int {
 	biggestID := 0
 	records := readInput(path)
@@ -28,9 +57,16 @@ func highestID(path string) int {
 }
 
 func seatID(record string) int {
-	fmt.Printf("record: %v\n", record)
 	row := findPosition(record[:7], 0, 127)
 	col := findPosition(record[7:], 0, 7)
+
+	if row < lowestRow {
+		lowestRow = row
+	}
+
+	if row > highestRow {
+		highestRow = row
+	}
 
 	seatID := row*8 + col
 	return seatID
